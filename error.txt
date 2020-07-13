@@ -1,0 +1,61 @@
+$ esy
+info esy 0.6.6 (using package.json)
+info checking https://github.com/ocaml/opam-repository for updates...
+info checking https://github.com/esy-ocaml/esy-opam-override for updates...
+info resolving esy packages: done                         
+info solving esy constraints: done         
+info resolving npm packages: done
+info fetching: done                                       
+info installing: done                                                
+info building ocaml@4.10.0@d41d8cd9
+info building ocaml@4.10.0@d41d8cd9: done
+info building @opam/ocamlfind@opam:1.8.1@ff07b0f9
+info building @opam/ocaml-secondary-compiler@opam:4.08.1-1@85df5d8f
+info building @opam/ocamlfind@opam:1.8.1@ff07b0f9: done
+info building @opam/ocaml-secondary-compiler@opam:4.08.1-1@85df5d8f: done
+info building @opam/ocamlfind-secondary@opam:1.8.1@1afa38b2
+info building @opam/ocamlfind-secondary@opam:1.8.1@1afa38b2: done
+info building @opam/dune@opam:2.6.1@e1bf507c
+info building @opam/dune@opam:2.6.1@e1bf507c: done
+info building @opam/dune-private-libs@opam:2.6.1@31997d39
+info building @opam/dune-private-libs@opam:2.6.1@31997d39: done
+info building @opam/dune-configurator@opam:2.5.1@aeb9d8d5
+error: build failed with exit code: 1
+  build log:
+    # esy-build-package: building: @opam/dune-configurator@opam:2.5.1
+    # esy-build-package: pwd: /Users/rjnevels/.esy/3/b/opam__s__dune_configurator-opam__c__2.5.1-cbc87ad1
+    # esy-build-package: running: 'dune' 'build' '-p' 'dune-configurator' '-j' '4' '@install'
+          ocamlc otherlibs/configurator/src/.configurator.objs/byte/configurator__V1.{cmo,cmt} (exit 2)
+    (cd _build/default && /Users/rjnevels/.esy/3________________________________________________________________/i/ocam
+l-4.10.0-f28f0ffe/bin/ocamlc.opt -w -40 -safe-string -g -bin-annot -I otherlibs/configurator/src/.configurator.objs/byt
+e -I /Users/rjnevels/.esy/3________________________________________________________________/i/opam__s__dune_private_lib
+s-opam__c__2.6.1-280cb26a/lib/dune-private-libs/dune-lang -I /Users/rjnevels/.esy/3____________________________________
+____________________________/i/opam__s__dune_private_libs-opam__c__2.6.1-280cb26a/lib/dune-private-libs/ocaml-config -I
+ /Users/rjnevels/.esy/3________________________________________________________________/i/opam__s__dune_private_libs-op
+am__c__2.6.1-280cb26a/lib/dune-private-libs/stdune -intf-suffix .ml -no-alias-deps -open Configurator__ -o otherlibs/co
+nfigurator/src/.configurator.objs/byte/configurator__V1.cmo -c -impl otherlibs/configurator/src/v1.ml)
+    File "otherlibs/configurator/src/v1.ml", line 379, characters 58-71:
+    379 |     fill_in_fields_that_depends_on_ocamlc_config { t with ocamlc_config }
+                                                                    ^^^^^^^^^^^^^
+    Error: This expression has type Ocaml_config.Vars.t
+           but an expression was expected of type string Stdune.String.Map.t
+        ocamlopt otherlibs/configurator/src/.configurator.objs/native/configurator__V1.{cmx,o} (exit 2)
+    (cd _build/default && /Users/rjnevels/.esy/3________________________________________________________________/i/ocam
+l-4.10.0-f28f0ffe/bin/ocamlopt.opt -w -40 -safe-string -g -I otherlibs/configurator/src/.configurator.objs/byte -I othe
+rlibs/configurator/src/.configurator.objs/native -I /Users/rjnevels/.esy/3_____________________________________________
+___________________/i/opam__s__dune_private_libs-opam__c__2.6.1-280cb26a/lib/dune-private-libs/dune-lang -I /Users/rjne
+vels/.esy/3________________________________________________________________/i/opam__s__dune_private_libs-opam__c__2.6.1
+-280cb26a/lib/dune-private-libs/ocaml-config -I /Users/rjnevels/.esy/3_________________________________________________
+_______________/i/opam__s__dune_private_libs-opam__c__2.6.1-280cb26a/lib/dune-private-libs/stdune -intf-suffix .ml -no-
+alias-deps -open Configurator__ -o otherlibs/configurator/src/.configurator.objs/native/configurator__V1.cmx -c -impl o
+therlibs/configurator/src/v1.ml)
+    File "otherlibs/configurator/src/v1.ml", line 379, characters 58-71:
+    379 |     fill_in_fields_that_depends_on_ocamlc_config { t with ocamlc_config }
+                                                                    ^^^^^^^^^^^^^
+    Error: This expression has type Ocaml_config.Vars.t
+           but an expression was expected of type string Stdune.String.Map.t
+    error: command failed: 'dune' 'build' '-p' 'dune-configurator' '-j' '4' '@install' (exited with 1)
+    esy-build-package: exiting with errors above...
+    
+  building @opam/dune-configurator@opam:2.5.1
+esy: exiting due to errors above

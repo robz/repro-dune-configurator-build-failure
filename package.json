@@ -1,0 +1,13 @@
+{
+  "name": "hello-reason",
+  "version": "0.1.0",
+  "description": "Example Reason Esy Project",
+  "license": "MIT",
+  "scripts": {
+  },
+  "dependencies": {
+    "@opam/dune-configurator": "2.5.1"
+  },
+  "devDependencies": {
+  }
+}
